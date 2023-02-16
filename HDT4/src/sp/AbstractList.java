@@ -10,28 +10,36 @@ public abstract class AbstractList<T> implements IList<T> {
         }
 
         public int count() {
-            return listaInterna.Count();
+            return listaInterna.count();
         }
 
 
         public boolean isEmpty() {
-            return listaInterna.IsEmpty();
+            return listaInterna.isEmpty();
         }
 
 
         public void push(T value) {
-            listaInterna.InsertAtStart(value);
+            listaInterna.addStart(value);
         }
 
 
         public T pull() {
-            return listaInterna.Delete(0);
+            return listaInterna.remove(0);
         }
 
 
         public T peek() {
-            return listaInterna.Get(0);
+            return listaInterna.getValue(0);
         }
+
+        public void addStart(T data) {
+            listaInterna.addStart(data);
+        }
+
+
+
+
 
     }
 }

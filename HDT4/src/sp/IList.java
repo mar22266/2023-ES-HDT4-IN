@@ -8,13 +8,12 @@ public interface IList<T> {
 
     public void add(T data, int index);
 
-    public void removeStart();
+    T removeStart();
+    T removeEnd();
 
-    public void removeEnd();
+    T remove(int index);
 
-    public void remove(int index);
-
-    public T get(int index);
+    public T getValue(int index);
 
     public int count();
 
