@@ -54,7 +54,7 @@ public class SingleLinkedList<T> extends AbstractList<T>{
                 i++;
             }
 
-            //Se inserta el nodo
+
             newNode.setNext(temp);
             pretemp.setNext(newNode);
             cont++;
