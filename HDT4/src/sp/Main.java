@@ -3,10 +3,21 @@ package sp;
 import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+ * Clase principal que ejecuta el programa
+ * Andre marroquin
+ */
 public class Main {
 
 
-
+    /**
+     * metodo que valida la entrada de un entero del usuario
+     * @param sc
+     * @param m
+     * @param abso
+     * @param validValues
+     * @return
+     */
     private static int IntV(Scanner sc,String m, boolean abso, Integer... validValues) {
 
         while (true) {
@@ -24,6 +35,10 @@ public class Main {
         }
     }
 
+    /**
+     * metodo que recibe la entrada del usuario y ejecuta el programa
+     * @param args
+     */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         CalculatorSingleton calc = CalculatorSingleton.getInstance();

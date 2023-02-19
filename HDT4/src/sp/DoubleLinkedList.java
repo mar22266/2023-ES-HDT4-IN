@@ -1,19 +1,28 @@
 package sp;
 
+/**
+ * andre marroquin
+ * @param <T>
+ */
 public class DoubleLinkedList<T> extends AbstractList<T> {
     private DoubleNode<T> start;
     private DoubleNode<T> end;
     private int count;
 
 
-
+    /**
+     * Constructor
+     */
     public DoubleLinkedList() {
         start = null;
         end = null;
         count = 0;
     }
 
-
+    /**
+     * agrega al inicio
+     * @param value
+     */
     public void addStart(T value) {
         DoubleNode<T> newNode = new DoubleNode<T>(value);
 
@@ -35,7 +44,10 @@ public class DoubleLinkedList<T> extends AbstractList<T> {
         count++;
     }
 
-
+    /**
+     * agrega al final
+     * @param value
+     */
     public void addEnd(T value) {
 
         DoubleNode<T> newNode = new DoubleNode<T>(value);
@@ -59,7 +71,11 @@ public class DoubleLinkedList<T> extends AbstractList<T> {
 
     }
 
-
+    /**
+     * agrega en cualquier posicion
+     * @param value
+     * @param index
+     */
     public void add(T value, int index) {
 
         if (IsEmpty())
@@ -100,9 +116,10 @@ public class DoubleLinkedList<T> extends AbstractList<T> {
     }
 
 
-
-
-
+    /**
+     * eliomina alinicio
+     * @return
+     */
     public T removeStart() {
         if (!IsEmpty()) {
 
@@ -128,7 +145,10 @@ public class DoubleLinkedList<T> extends AbstractList<T> {
 
     }
 
-
+    /**
+     * obtiene el valor de la posicion
+     * @return
+     */
     public T getValue(int index) {
         if (!IsEmpty())
         {
@@ -169,7 +189,10 @@ public class DoubleLinkedList<T> extends AbstractList<T> {
 
     }
 
-
+    /**
+     * contaodor de elementos
+     * @return
+     */
     public int count() {
         return 0;
     }
@@ -178,17 +201,35 @@ public class DoubleLinkedList<T> extends AbstractList<T> {
         return false;
     }
 
+    /**
+     * verifica si esta vacio
+     * @return
+     */
     public boolean IsEmpty() {
         return count == 0;
     }
 
+    /**
+     * elimina en cualquier posicion
+     * @param index
+     * @return
+     */
     public T remove(int index) {
         return null;
     }
+
+    /**
+     * cuenta los elementos
+     * @return
+     */
     public int Count() {
         return count;
     }
 
+    /**
+     * elimina al final
+     * @return
+     */
     public T removeEnd() {
         return null;
     }

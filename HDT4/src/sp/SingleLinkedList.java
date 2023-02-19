@@ -1,11 +1,18 @@
 package sp;
 
+/**
+ * Andre marroquin
+ * @param <T>
+ */
 public class SingleLinkedList<T> extends AbstractList<T>{
     private int cont;
     private Node<T> top;
     private Node<T> bottom;
 
-
+    /**
+     * anade al inicio
+     * @param value
+     */
     public void addStart(T value){
 
         Node<T> nuevo = new Node<T>(value);
@@ -21,6 +28,10 @@ public class SingleLinkedList<T> extends AbstractList<T>{
         cont++;
     }
 
+    /**
+     * anade al final
+     * @param value
+     */
     public void addEnd(T value){
 
         Node<T> nuevo = new Node<T>(value);
@@ -36,6 +47,11 @@ public class SingleLinkedList<T> extends AbstractList<T>{
         cont++;
     }
 
+    /**
+     * anade en cualquier posicion
+     * @param value
+     * @param pos
+     */
     public void add(T value, int pos) {
 
         if (isEmpty()) {
@@ -62,6 +78,11 @@ public class SingleLinkedList<T> extends AbstractList<T>{
         }
     }
 
+    /**
+     * elimina en cualquier posicion
+     * @param index
+     * @return
+     */
 
     public T remove(int index) {
 
@@ -98,6 +119,11 @@ public class SingleLinkedList<T> extends AbstractList<T>{
         }
     }
 
+    /**
+     * obtiene el valor de cualquier posicion
+     * @param index
+     * @return
+     */
     public T Get(int index) {
 
         if (!isEmpty())
@@ -138,6 +164,10 @@ public class SingleLinkedList<T> extends AbstractList<T>{
         return null;
     }
 
+    /**
+     *  elimina al inicio
+     * @return
+     */
     public T removeStart() {
 
         if (!isEmpty())
@@ -151,6 +181,10 @@ public class SingleLinkedList<T> extends AbstractList<T>{
         return null;
     }
 
+    /**
+     * elimina al final
+     * @return
+     */
     public T removeEnd() {
         if (!isEmpty())
         {
@@ -186,6 +220,12 @@ public class SingleLinkedList<T> extends AbstractList<T>{
 
         return null;
     }
+
+    /**
+     * obtiene el valor de cualquier posicion
+     * @param index
+     * @return
+     */
     public T getValue(int index) {
 
         if (!isEmpty())
@@ -227,13 +267,20 @@ public class SingleLinkedList<T> extends AbstractList<T>{
     }
 
 
+    /**
+     * cuenta los elementos
+     * @return
+     */
     public int count() {
-        return 0;
+        return cont;
     }
 
-
+    /**
+     * verifica si esta vacio
+     * @return
+     */
     public boolean isEmpty() {
-        return false;
+        return cont == 0;
     }
 
 }

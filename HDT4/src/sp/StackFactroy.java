@@ -1,11 +1,20 @@
 package sp;
 
 import java.util.Scanner;
-
+/**
+ * Andre marroquin
+ * @param <T>
+ */
 public class StackFactroy<T> {
-
+    /**
+     * Stack crada
+     */
     private IStack<T> stack;
 
+    /**
+     * Da la opcion de crear una pila distinto patron factory
+     * @param im
+     */
     public StackFactroy(int im) {
         if (im ==1) {
             stack = new StackVector<>();
@@ -21,6 +30,10 @@ public class StackFactroy<T> {
         }
     }
 
+    /**
+     * retorna la pila creada
+     * @return
+     */
     public IStack<T> getInstance() {
         return stack;
     }

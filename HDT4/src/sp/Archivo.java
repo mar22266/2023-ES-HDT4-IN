@@ -2,12 +2,22 @@ package sp;
 
 import java.io.*;
 import java.util.ArrayList;
-
+/**
+ * Clase Archivo
+ * @author Andre marroquin
+ */
 public class Archivo {
 
+    /**
+     * Ruta del archivo
+     */
     public static final String path = "C:\\Users\\andre\\OneDrive\\Desktop\\HT\\HDTES\\HDT4\\data.txt";
 
-
+    /**
+     * Metodo que lee el archivo
+     * @return
+     * @throws IOException
+     */
     public static String[] readFile() throws IOException {
         File doc = new File(path);
 
@@ -26,6 +36,11 @@ public class Archivo {
     }
 
 
+    /**
+     * Metodo que escribe en el archivo
+     * @param text
+     * @throws IOException
+     */
     public static void writeFile(String text) throws IOException {
         File archivo = new File(path);
         if (!archivo.exists()) {

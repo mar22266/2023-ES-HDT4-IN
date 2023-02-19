@@ -1,13 +1,25 @@
 package sp;
 
+/**
+ * @author Andre marroquin
+ */
 public class CalculatorSingleton {
+    /**
+     * Singleton instance
+     */
     private static CalculatorSingleton instance = null;
 
+    /**
+     * Constructor
+     */
     private CalculatorSingleton() {
 
     }
 
-
+    /**
+     * obtiene la insatancia del singleton
+     * @return
+     */
     public static CalculatorSingleton getInstance() {
         if (instance == null) {
             instance = new CalculatorSingleton();
@@ -15,6 +27,11 @@ public class CalculatorSingleton {
         return instance;
     }
 
+    /**
+     * convierte de string a int
+     * @param value
+     * @return
+     */
     private Integer parser(String value) {
 
         try {
@@ -23,7 +40,13 @@ public class CalculatorSingleton {
             return null;
         }
     }
-  
+
+    /**
+     * calcula de infic a postfix
+     * @param ex
+     * @param im
+     * @return
+     */
 
     public String ItoPCalc(String ex, int im) {
         ex = ex.trim();
@@ -73,6 +96,11 @@ public class CalculatorSingleton {
         return post.replace("", " ").trim();
     }
 
+    /**
+     * calcula el resultado postfix
+     * @param ex
+     * @return
+     */
     public double calculate(String ex) {
 
         String[] datos = ex.split(" ");
@@ -125,12 +153,23 @@ public class CalculatorSingleton {
             return obtiene;
     }
 
+    /**
+     * calcula el resultado infix
+     * @param ex
+     * @param im
+     * @return
+     */
         public double IN (String ex, int im){
 
             String postfix = ItoPCalc(ex, im);
             return calculate(postfix);
         }
-        
+
+        /**
+         * calcula la precedencia
+         * @param op
+         * @return
+         */
         private int prece(String op) {
 
             switch (op) {
