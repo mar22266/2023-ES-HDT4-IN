@@ -2,9 +2,8 @@ package sp;
 
 public class Node<T> {
 
-    private T value; //Valor a guardar
-    private Node<T> next; //Nodo siguiente
-
+    private T value;
+    private Node<T> next;
 
     public Node(T value) {
         this.setValue(value);

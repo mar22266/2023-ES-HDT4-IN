@@ -4,36 +4,24 @@ import java.util.ArrayList;
 
 public abstract class AbstractStack<T> implements IStack<T> {
 
-    private ArrayList<T> data;
+        public void push(T item) {
 
-    public AbstractStack() {
-        data = new ArrayList<T>();
-    }
-
-    public void push(T item) {
-        data.add(item);
-    }
-
-    public T pull() {
-        if(data.isEmpty()) {
-            return null;
         }
-        return data.remove(data.size() - 1);
-    }
-
-    public T peek() {
-        if(data.isEmpty()) {
-            return null;
+        public T pull() {
+                return null;
         }
-        return data.get(0);
-    }
 
-    public int count() {
-        return data.size();
-    }
+        public T peek() {
+                return null;
+        }
 
-    public boolean isEmpty() {
-        return data.isEmpty();
-    }
+        public int count() {
+                return 0;
+        }
+
+        public boolean isEmpty() {
+                return false;
+        }
+
 
 }

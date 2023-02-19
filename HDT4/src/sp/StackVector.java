@@ -39,10 +39,6 @@ public class StackVector<T> extends AbstractStack<T> {
         VECTOR[0] = valor;
     }
 
-    @Override
-    public T pop() {
-        return null;
-    }
 
     public T peek(){
         return VECTOR[0];
@@ -56,10 +52,7 @@ public class StackVector<T> extends AbstractStack<T> {
         return VECTOR[0] == null;
     }
 
-    @Override
-    public int size() {
-        return 0;
-    }
+
 
     public T pull(){
         T aux = VECTOR[0];

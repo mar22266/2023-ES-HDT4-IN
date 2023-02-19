@@ -2,14 +2,14 @@ package sp;
 
 public interface IStack<T> {
 
-    public void push(T data);
+    void push(T data);
 
-    public T pop();
+    T peek();
 
-    public T peek();
+    boolean isEmpty();
 
-    public boolean isEmpty();
+    int count();
 
-    public int size();
+    T pull();
 
 }

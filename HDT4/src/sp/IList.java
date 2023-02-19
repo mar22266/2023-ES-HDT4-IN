@@ -2,20 +2,20 @@ package sp;
 
 public interface IList<T> {
 
-    public void addStart(T data);
+    void addStart(T data);
 
-    public void addEnd(T data);
+    void addEnd(T data);
 
-    public void add(T data, int index);
+    void add(T data, int index);
 
     T removeStart();
     T removeEnd();
 
     T remove(int index);
 
-    public T getValue(int index);
+    T getValue(int index);
 
-    public int count();
+    int count();
 
-    public boolean isEmpty();
+    boolean isEmpty();
 }
