@@ -11,9 +11,15 @@ import java.util.Scanner;
  */
 public class Principal {
 
+    /**
+     * EL main args donde se corre la interaccion con el usuario
+     * @param args
+     */
     public static void main(String[] args) {
 
-
+        /**
+         * Scanner para leer datos
+         */
         Scanner sc = new Scanner(System.in);
         boolean op = false;
 
@@ -21,6 +27,9 @@ public class Principal {
         Map<String, String> collection = null;
         Map<String, String> Datos = null;
 
+        /**
+         * Menu para seleccionar el tipo de hash
+         */
         while (!op) {
             System.out.println("------Bienvenido-----");
             System.out.println("Ingrese la opcion que desea: ");
@@ -37,6 +46,9 @@ public class Principal {
             }
         }
 
+        /**
+         * Menu para seleccionar las opciones
+         */
         int decision = 0;
          do {
              System.out.println("Ingrese la opcion que desea: ");

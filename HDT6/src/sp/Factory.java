@@ -12,6 +12,12 @@ import java.util.TreeMap;
  * Algoritmos y estructuras de datos
  */
 public class Factory<K, V> {
+    /**
+     * Metodo para crear el tipo de hash
+     * @param option tipo de hash
+     * @return Mapa con el tipo de hash
+     * @throws Exception
+     */
     public Map<K, V> getMap (int option) throws Exception {
         if (option == 1) {
             return new HashMap<K, V>();

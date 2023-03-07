@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/HDT6.iml" filepath="$PROJECT_DIR$/HDT6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Jdoc/Jdoc.iml" filepath="$PROJECT_DIR$/Jdoc/Jdoc.iml" />
     </modules>
   </component>
 </project>

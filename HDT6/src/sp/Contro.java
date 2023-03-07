@@ -9,6 +9,13 @@ import java.util.*;
  */
 public class Contro {
 
+    /**
+     * tipo de producto
+     * @param key producto
+     * @param mapa tipo de mapa
+     * @return
+     * @throws Exception
+     */
     public static String Tipo(String key,Map<String,String> mapa) throws Exception{
         String valor =mapa.get(key);
         if (valor ==null){
@@ -17,7 +24,12 @@ public class Contro {
         return valor;
     }
 
-
+    /**
+     * Muestra el super
+     * @param mapa tipo de mapa que se va a usar
+     * @param PRINT imprime
+     * @return
+     */
     public static String MostrarMap(Map<String,String> mapa,boolean PRINT){
         String var = "";
         if (mapa.isEmpty()){
@@ -33,14 +45,26 @@ public class Contro {
         return var;
     }
 
+    /**
+     * Agrega producto
+     * @param key llave
+     * @param mapa tipo de mapa
+     * @param colection coleccion
+     * @return la variable
+     * @throws Exception
+     */
     public static Map<String,String> Add(String key,Map<String,String> mapa,Map<String,String> colection) throws Exception{
         colection.put(key,Tipo(key,mapa));
         return colection;
     }
 
 
-
-
+    /**
+     * Muestra el super ya ordenado
+     * @param mapa tipo de mapa que se va a usar
+     * @param PRINT imprime
+     * @return
+     */
         public static String MostrarOrdenadp(Map<String,String> mapa,boolean PRINT){
         String var = "";
         Comparator<Map.Entry> compareByKeyType = new Comparator<Map.Entry>() {
