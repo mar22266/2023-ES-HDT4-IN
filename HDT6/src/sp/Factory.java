@@ -12,18 +12,15 @@ import java.util.TreeMap;
  * Algoritmos y estructuras de datos
  */
 public class Factory<K, V> {
-    public Map<K, V> getMap (int option) throws Exception {
-        if (option == 1) {
+    public Map<K, V> getMap(String option) throws Exception {
+        if (option.equalsIgnoreCase("HashMap")) {
             return new HashMap<K, V>();
-
-        } else if (option == 2) {
+        } else if (option.equalsIgnoreCase("TreeMap")) {
             return new TreeMap<K,V>();
-
-        } else if (option == 3) {
+        } else if(option.equalsIgnoreCase("LinkedHashMap")) {
             return new LinkedHashMap<K,V>();
-
         } else {
-            throw new Exception("Opcion invalida.");
+            throw new Exception("Option no valida.");
         }
     }
 
