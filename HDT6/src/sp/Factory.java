@@ -1,5 +1,5 @@
 package sp;
-import org.jetbrains.annotations.NotNull;
+
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -12,15 +12,18 @@ import java.util.TreeMap;
  * Algoritmos y estructuras de datos
  */
 public class Factory<K, V> {
-    public Map<K, V> getMap(String option) throws Exception {
-        if (option.equalsIgnoreCase("HashMap")) {
+    public Map<K, V> getMap (int option) throws Exception {
+        if (option == 1) {
             return new HashMap<K, V>();
-        } else if (option.equalsIgnoreCase("TreeMap")) {
+
+        } else if (option == 2) {
             return new TreeMap<K,V>();
-        } else if(option.equalsIgnoreCase("LinkedHashMap")) {
+
+        } else if (option == 3) {
             return new LinkedHashMap<K,V>();
+
         } else {
-            throw new Exception("Option no valida.");
+            throw new Exception("Opcion invalida.");
         }
     }
 

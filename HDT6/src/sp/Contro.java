@@ -24,9 +24,9 @@ public class Contro {
             var ="\nCollecion vacia";
         } else {
             if (PRINT){
-                var ="\nCategorias en la coleccion";
+                var ="\nDatos en la coleccion";
                 for (String dato: mapa.keySet()){
-                    var = var + "\n Nombre: "+dato +", Categoria: "+mapa.get(dato);
+                    var = var + "\nCategoria: "+mapa.get(dato)+"\t\t"+" Nombre: "+dato;
                 }
             }
         }
@@ -40,4 +40,30 @@ public class Contro {
 
 
 
+
+        public static String MostrarOrdenadp(Map<String,String> mapa,boolean PRINT){
+        String var = "";
+        Comparator<Map.Entry> compareByKeyType = new Comparator<Map.Entry>() {
+            public int compare(Map.Entry a1, Map.Entry a2) {
+                Comparable value1 = (Comparable) a1.getValue();
+                Comparable value2 = (Comparable) a2.getValue();
+                return value1.compareTo(value2);
+            }
+        };
+        Set entrySet = mapa.entrySet();
+        ArrayList<Map.Entry> sortedEntries = new ArrayList(entrySet);
+        sortedEntries.sort(compareByKeyType);
+        if (mapa.isEmpty()){
+            var ="\nCollecion vacia";
+        } else {
+            if(PRINT){
+                var = "\nDatos: ";
+                for (Map.Entry entry:
+                        sortedEntries) {
+                    var = var + "\n Categoria: " +entry.getValue() + "\t\t"+ " Nombre: "+ entry.getKey();
+                }
+            }
+        }
+        return var;
+    }
 }
