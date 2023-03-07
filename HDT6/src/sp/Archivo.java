@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class Archivo {
 
-    public static Map<String, String> readfile(String TIPO, String ARCH) throws Exception{
+    public static Map<String, String> readfile(int TIPO, String ARCH) throws Exception{
         Factory<String, String> hashF = new Factory<String,String>();
         Map<String, String> hash = hashF.getMap(TIPO);
         try{
@@ -20,7 +20,7 @@ public class Archivo {
             Scanner sc = new Scanner(file);
             while (sc.hasNextLine()){
                 String linea = sc.nextLine();
-                String[] datos = linea.split(" |\t");
+                String[] datos = linea.split("\\|");
                 hash.put(datos[0],datos[1]);
             }
             sc.close();
@@ -30,7 +30,7 @@ public class Archivo {
         return hash;
     }
 
-    public static Map<String, String> readfile2(String TIPO, String ARCH, int cu) throws Exception{
+    public static Map<String, String> readfile2(int TIPO, String ARCH, int cu) throws Exception{
         Factory<String, String> hashF = new Factory();
         Map<String, String> hash = hashF.getMap(TIPO);
         try{
@@ -38,7 +38,7 @@ public class Archivo {
             Scanner sc = new Scanner(file);
             for(int i = 0; i < cu ; i ++){
                 String linea = sc.nextLine();
-                String[] datos = linea.split(" |\t");
+                String[] datos = linea.split("\\|");
                 hash.put(datos[0],datos[1]);
             }
             sc.close();
