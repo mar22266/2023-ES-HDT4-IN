@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 /**
- *@Author: Andre Marroquin
+ *@Author: Andre Marroquin and MAAG
  * Estructuras de datos Hoja de trabajo 7
  */
 public interface IBST<K,V> {
