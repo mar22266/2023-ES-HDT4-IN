@@ -18,7 +18,7 @@ public class File {
             String var = "";
             String line;
             while ((line = bf.readLine()) != null) {
-                var = var + line;
+                var += line + "\n";
             }
             entrada = var;
         } catch (Exception e) {

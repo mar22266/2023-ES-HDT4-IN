@@ -386,7 +386,7 @@ public class BST<K,V> implements IBST<K,V>{
      */
     private void internalGetElements(ArrayList<V> list, Association<K, V> actual) {
         if (actual != null) {
-            internalGetElements(list, actual.getDerecha());
+            internalGetElements(list, actual.getIzquierda());
 
             list.add((V)(actual.getKey() + "=" + actual.getValue()));
 
