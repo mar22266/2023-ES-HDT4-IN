@@ -21,13 +21,6 @@ public interface IBST<K,V> {
     V find(K key);
 
     /**
-     * Metodo que elimina un valor en el arbol
-     * @param key
-     * @return
-     */
-    V delete(K key);
-
-    /**
      * Metodo que retorna el numero de elementos en el arbol
      * @return
      */
