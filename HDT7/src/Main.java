@@ -15,7 +15,7 @@ public class Main {
          * Se lee el diccionario y la oracion a traducir
          */
         String diccionario = arch.FileReader("diccionario.txt");
-        String oracion = arch.FileReader("texto.txt");
+        String texto = arch.FileReader("texto.txt");
         contr.Agregar(diccionario);
         boolean salir = false;
 
@@ -42,15 +42,10 @@ public class Main {
                 case 2:
                     System.out.println("\nDETECTA EL IDIOMA AUTOMATICAMENTE Y LO TRADUCE A ESPAÑOL");
                     System.out.println("||||Se coloca * a las palabras que no se pueden traducir||||\n");
-                    System.out.println("Oringinal: ");
-                    for (int i = 0; i < 1; i++){
-                        System.out.println(oracion);
-                    }
-                    System.out.println("Traducida: " + "\t" );
-                    String IMPRESION = contr.TraductorAesp(oracion);
-                    for(int i = 0; i< 1; i ++){
-                        System.out.println(IMPRESION);
-                    }
+                    System.out.println("Origianal: ");
+                    System.out.println(texto);
+                    System.out.println("Traducido: ");
+                    System.out.println(contr.traducirOracionesAEsp(texto));
                     break;
                 /**
                  * Se sale del programa

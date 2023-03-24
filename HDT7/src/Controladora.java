@@ -25,19 +25,20 @@ public class Controladora {
 
     /**
      * Metodo que agrega los datos al arbol
+     *
      * @param almacenador
      */
-    public void Agregar(String almacenador){
+    public void Agregar(String almacenador) {
         String[] line = almacenador.split("\n");
-        for (String Trans: line){
+        for (String Trans : line) {
             String[] word = Trans.split(",");
-            if (!word[0].equals(" ") && !word[1].equals(" ")){
+            if (!word[0].equals(" ") && !word[1].equals(" ")) {
                 InglesBST.insert(word[0].toLowerCase().trim(), word[1].toLowerCase().trim());
             }
-            if (!word[0].equals(" ") && !word[1].equals(" ")){
+            if (!word[0].equals(" ") && !word[1].equals(" ")) {
                 EspanolBST.insert(word[1].toLowerCase().trim(), word[1].toLowerCase().trim());
             }
-            if (!word[0].equals(" ") && !word[1].equals(" ")){
+            if (!word[0].equals(" ") && !word[1].equals(" ")) {
                 FrancesBST.insert(word[2].toLowerCase().trim(), word[1].toLowerCase().trim());
             }
 
@@ -46,26 +47,27 @@ public class Controladora {
 
     /**
      * Metodo que muestra los arboles en orden
+     *
      * @return
      */
 
-    public String MostrarInOrder(){
+    public String MostrarInOrder() {
         String TIT;
         ArrayList<String> valoresIngles = InglesBST.getElements();
         String titleIngles = "--INGLES--\n";
-        for (String valorIngles: valoresIngles){
+        for (String valorIngles : valoresIngles) {
             titleIngles += valorIngles + "\n";
         }
 
         ArrayList<String> valoresEspanol = EspanolBST.getElements();
         String titleEspanol = "--ESPANOL--\n";
-        for (String valorEspanol: valoresEspanol){
+        for (String valorEspanol : valoresEspanol) {
             titleEspanol += valorEspanol + "\n";
         }
 
         ArrayList<String> valoresFrances = FrancesBST.getElements();
         String titleFrances = "--FRANCES--\n";
-        for (String valorFrances: valoresFrances){
+        for (String valorFrances : valoresFrances) {
             titleFrances += valorFrances + "\n";
         }
 
@@ -74,51 +76,54 @@ public class Controladora {
     }
 
     /**
-     * Metodo que traduce una oracion a espaniol
-     * @param oracion
+     * Metodo que traduce las oraciones del archivo a espaniol
+     * @param texto la entrada
      * @return
      */
-    public String TraductorAesp(String oracion){
-        oracion = oracion.replaceAll("[.,;:]","");
-        oracion = oracion.replaceAll("\n","");
-        oracion = oracion.toLowerCase();
-        String[] words = oracion.split(" ");
-        ArrayList<String> ingles = InglesBST.getElements();
-        ArrayList<String> frances = FrancesBST.getElements();
-        ArrayList<String> espanol = EspanolBST.getElements();
-        String[] linea;
-        String fin = "";
-        boolean flag = false;
+    public String traducirOracionesAEsp(String texto) {
+        String[] oraciones = texto.split("\\.");
+        for (String oracion : oraciones) {
+            oracion = oracion.replaceAll("[.,;:]", "");
+            oracion = oracion.replaceAll("\n", "");
+            oracion = oracion.toLowerCase();
+            String[] palabras = oracion.split(" ");
+            ArrayList<String> ingles = InglesBST.getElements();
+            ArrayList<String> frances = FrancesBST.getElements();
+            ArrayList<String> espanol = EspanolBST.getElements();
+            String[] linea;
 
-        for (String word: words){
-            for (String wordI: ingles) {
-                linea = wordI.split("=");
-                if (linea[0].equals(word)) {
-                    flag = true;
-                    fin += linea[1] + " ";
+            StringBuilder builder = new StringBuilder();
+            boolean flag = false;
+            for (String palabra : palabras) {
+                for (String wordI : ingles) {
+                    linea = wordI.split("=");
+                    if (linea[0].equals(palabra)) {
+                        flag = true;
+                        builder.append(linea[1]).append(" ");
+                    }
                 }
-            }
-            for (String wordF: frances) {
-                linea = wordF.split("=");
-                if (linea[0].equals(word)) {
-                    flag = true;
-                    fin += linea[1] + " ";
+                for (String wordF : frances) {
+                    linea = wordF.split("=");
+                    if (linea[0].equals(palabra)) {
+                        flag = true;
+                        builder.append(linea[1]).append(" ");
+                    }
                 }
-            }
-            for (String wordE: espanol) {
-                linea = wordE.split("=");
-                if (linea[0].equals(word)) {
-                    flag = true;
-                    fin += linea[1] + " ";
+                for (String wordE : espanol) {
+                    linea = wordE.split("=");
+                    if (linea[0].equals(palabra)) {
+                        flag = true;
+                        builder.append(linea[1]).append(" ");
+                    }
                 }
+                if (!flag) {
+                    builder.append("*").append(palabra).append("* ").append(" ");
+                }
+                flag = false;
             }
-            if (!flag){
-                fin += "*" + word + "* ";
-            }
-            flag = false;
+
+            System.out.println(builder.toString().trim());
         }
-
-        return fin;
+        return "\nYa se traducieron las oraciones...\n";
     }
-
 }
