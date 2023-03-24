@@ -124,6 +124,6 @@ public class Controladora {
 
             System.out.println(builder.toString().trim());
         }
-        return "\nYa se traducieron las oraciones...\n";
+        return "\nYa se tradujeron las oraciones...\n";
     }
 }
