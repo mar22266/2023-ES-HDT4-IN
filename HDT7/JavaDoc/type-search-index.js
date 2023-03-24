@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"<Unnamed>","l":"Association"},{"p":"<Unnamed>","l":"BST"},{"p":"<Unnamed>","l":"Comparadora"},{"p":"<Unnamed>","l":"Controladora"},{"p":"<Unnamed>","l":"File"},{"p":"<Unnamed>","l":"IBST"},{"p":"<Unnamed>","l":"ITraversal"},{"p":"<Unnamed>","l":"Main"}];updateSearchResults();
