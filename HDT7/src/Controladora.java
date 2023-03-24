@@ -91,7 +91,6 @@ public class Controladora {
         boolean flag = false;
 
         for (String word: words){
-
             for (String wordI: ingles) {
                 linea = wordI.split("=");
                 if (linea[0].equals(word)) {
@@ -116,7 +115,6 @@ public class Controladora {
             if (!flag){
                 fin += "*" + word + "* ";
             }
-
             flag = false;
         }
 

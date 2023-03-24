@@ -25,7 +25,7 @@ public class Main {
         while (!salir){
             System.out.println("---BIENVENIDO AL TRADUCTOR: ");
             System.out.println("1. Mostrar palabras INORDER (alfabetico) por lenguaje y su respectiva palabra en espaniol.");
-            System.out.println("1. Traducir oracion del archivo a espaniol.");
+            System.out.println("2. Traducir oracion del archivo a espaniol.");
             System.out.println("3. Salir.");
             int des = sc.nextInt();
             sc.nextLine();
@@ -37,12 +37,20 @@ public class Main {
                     System.out.println("\n" + contr.MostrarInOrder() + "\n");
                     break;
                 /**
-                 * Se traduce la oracion del archivo a espaniol
+                 * Se traduce la oracion del archivo a espaniol INGLES Y FRANCES
                  */
                 case 2:
-                    System.out.println("\n||||Se coloca * a las palabras que no se pueden traducir||||\n");
-                    System.out.println("Oringinal: " + "\t" + oracion);
-                    System.out.println("Traducida: " + "\t" + contr.TraductorAesp(oracion)+ "\n");
+                    System.out.println("\nDETECTA EL IDIOMA AUTOMATICAMENTE Y LO TRADUCE A ESPAÑOL");
+                    System.out.println("||||Se coloca * a las palabras que no se pueden traducir||||\n");
+                    System.out.println("Oringinal: ");
+                    for (int i = 0; i < 1; i++){
+                        System.out.println(oracion);
+                    }
+                    System.out.println("Traducida: " + "\t" );
+                    String IMPRESION = contr.TraductorAesp(oracion);
+                    for(int i = 0; i< 1; i ++){
+                        System.out.println(IMPRESION);
+                    }
                     break;
                 /**
                  * Se sale del programa
