@@ -56,9 +56,40 @@ public class Main {
                         System.out.println(union.toString());
                     }
                     break;
+
                 case 2:
-                    System.out.println("Usted ha seleccionado la opcion 2");
+                    /**
+                     * Crea el vector heap
+                     * Leer el archivo procesos.txt
+                     */
+                    VectorHeap<Proceso> HEAP = new VectorHeap<>();
+                    try (BufferedReader br = new BufferedReader(new FileReader("procesos.txt"))) {
+                        String line;
+                        while ((line = br.readLine()) != null) {
+                            String[] tokens = line.split(",");
+                            String nombre = tokens[0];
+                            String usuario = tokens[1];
+                            int nice = Integer.parseInt(tokens[2]);
+                            Proceso p = new Proceso(nombre, usuario, nice);
+                            HEAP.add(p);
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    /**
+                     * Imprimir los procesos ordenados por prioridad
+                     */
+                    while (!HEAP.isEmpty()) {
+                        Proceso proces = HEAP.remove();
+                        StringBuilder union = new StringBuilder();
+                        union.append(proces.getNombreProceso()).append(",");
+                        union.append(proces.getNombreUsuario()).append(",");
+                        union.append(proces.getValorNice()).append(",");
+                        union.append("PR=").append(proces.getPrioridad());
+                        System.out.println(union.toString());
+                    }
                     break;
+
                 case 3:
                     salir = true;
                     System.out.println("Saliendo del programa");
