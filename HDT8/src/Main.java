@@ -28,6 +28,8 @@ public class Main {
                      * Crea la prioruty queue
                      * Leer el archivo procesos.txt
                      */
+
+                    //SE CREA EL PRIORITY QUEUE DE JCF
                     PriorityQueue<Proceso> QUEUE = new PriorityQueue<>();
                     try (BufferedReader br = new BufferedReader(new FileReader("procesos.txt"))) {
                         String line;
@@ -62,6 +64,8 @@ public class Main {
                      * Crea el vector heap
                      * Leer el archivo procesos.txt
                      */
+
+                    //SE CREA EL VECTOR HEAP REALIZADO A MANO
                     VectorHeap<Proceso> HEAP = new VectorHeap<>();
                     try (BufferedReader br = new BufferedReader(new FileReader("procesos.txt"))) {
                         String line;

@@ -5,62 +5,41 @@
 /**
  * @version $Id: PriorityQueue.java 22 2006-08-21 19:27:26Z bailey $
  * @author, 2001 duane a. bailey
- * Clase VectorHeap utlizada del libro de estructuras de datos y algoritmos bailey
+ * ""Clase VectorHeap utlizada del libro de estructuras de datos y algoritmos bailey""
  */
 public interface PriorityQueue<E extends Comparable<E>>
 {
     /**
-     * Fetch lowest valued (highest priority) item from queue.
-     *
-     * @pre !isEmpty()
-     * @post returns the minimum value in priority queue
-     * 
-     * @return The smallest value from queue.
+     * obtiene el primer elemento de la cola
+     * @return
      */
     public E getFirst();
 
     /**
-     * Returns the minimum value from the queue.
-     *
-     * @pre !isEmpty()
-     * @post returns and removes minimum value from queue
-     * 
-     * @return The minimum value in the queue.
+     * quita un valor de el priority queue
+     * @return
      */
     public E remove();
 
-    /**
-     * Add a value to the priority queue.
-     *
-     * @pre value is non-null comparable
-     * @post value is added to priority queue
-     * 
-     * @param value The value to be added.
-     */
+   /*
+    * Agrega un valor al priority queue
+    */
     public void add(E value);
 
     /**
-     * Determine if the queue is empty.
-     *
-     * @post returns true iff no elements are in queue
-     * 
-     * @return True if the queue is empty.
+     * determina si el priority queue esta vacio
+     * @return
      */
     public boolean isEmpty();
 
     /**
-     * Determine the size of the queue.
-     *
-     * @post returns number of elements within queue
-     * 
-     * @return The number of elements within the queue.
+     * obtiene el tamaño del priority queue
+     * @return
      */
     public int size();
 
     /**
-     * Remove all the elements from the queue.
-     *
-     * @post removes all elements from queue
+     * limpia el priority queue
      */
     public void clear();
 }
