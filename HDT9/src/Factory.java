@@ -2,19 +2,20 @@
  * @author Andre marroquin, 22266
  * HDT 9 - Estructura de datos
  */
-public class Factory<K, V> {
+public class Factory{
 
     /**
-     * metodo para ver que tipo de arbol se va a utilizar
-     * @param op opcion de arbol
-     * @return retorna el arbol
+     * Selecciona el tipo de mapa
+     * @param op eleccion del usuario
+     * @return el tipo de mapa
      */
-    public IMap<K, V> getStack(int op){
-        if(op==1){
-            return null;
-        }else if(op==2){
-            return new HashMap<K, V>();
-        }
-        return null;
+
+    public IMap gett(String op) {
+        return switch (op) {
+            case "HashMap" -> new HashMapa();
+            case "RBT" -> new RBT();
+            case "Splay" -> new Splay();
+            default -> throw new IllegalArgumentException("ERROR");
+        };
     }
 }
