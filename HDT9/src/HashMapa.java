@@ -125,6 +125,7 @@ public class HashMapa<K,V> implements Map,IMap<K,V> {
      * @param key
      * @param Valor
      */
+    @Override
     public void add(K key, V Valor) {
         map.put(key,Valor);
     }
@@ -134,6 +135,7 @@ public class HashMapa<K,V> implements Map,IMap<K,V> {
      * @param key
      * @return
      */
+    @Override
     public boolean find(K key) {
         return map.containsKey(key);
     }
