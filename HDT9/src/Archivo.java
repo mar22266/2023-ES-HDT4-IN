@@ -17,7 +17,7 @@ public class Archivo {
      */
     public void lectura(IMap tree){
         try {
-            File file = new File("spanish.txt");
+            File file = new File("Spanish.txt");
             Scanner reader = new Scanner(file);
             int i = 0;
             while (reader.hasNextLine()) {

@@ -1,0 +1,10 @@
+ship	barco [noun]
+was	era
+a	un
+sink	hundio [verb]
+play	poner [verb]
+music	musica
+me	me [pronoun]
+cat	gato [noun]
+table	mesa
+on	encima
