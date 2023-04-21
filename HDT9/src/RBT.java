@@ -32,7 +32,6 @@
  ******************************************************************************/
 
 import java.util.NoSuchElementException;
-import java.util.Queue;
 
 /**
  *  The {@code BST} class represents an ordered symbol table of generic
