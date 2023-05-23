@@ -13,7 +13,7 @@ import org.junit.jupiter.api.Test;
 class FloydWarshallTest {
 
     /**
-     * Test method for.
+     * Test de floy warshall
      */
     @Test
     void testCalcularRutas() {
