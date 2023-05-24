@@ -1,4 +1,4 @@
 BuenosAires SaoPaulo 10 15 20 50
 BuenosAires Lima 15 20 30 80
-Lima Quito 10 12 15 20
+Lima Quito 20 12 15 20
 Quito Denver 20 30 10 15
