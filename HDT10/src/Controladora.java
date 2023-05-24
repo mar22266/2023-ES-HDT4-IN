@@ -7,7 +7,7 @@ import java.util.*;
  */
 
 
-public class Controladora {
+public class Controladora extends Nodo {
 
     /**
      * crea el mapa de ciudades y el arraylist y demas atributos necesarios

@@ -7,7 +7,7 @@ import java.util.Scanner;
  * ESTRUCTURA DE DATOS
  */
 
-public class Main {
+public class Main extends Controladora {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("\n-------Bienvenido al programa de Ruta más Corta------");
